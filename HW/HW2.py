@@ -1,15 +1,13 @@
-so_nguyen = int(input("Nhap chuoi so 3 chu so: "))
 
-tong_chu_so_chan = 0
-tong_chu_so_le = 0
 
-while so_nguyen > 0:
-    if so_nguyen % 2 != 0:
-        tong_chu_so_le += so_nguyen % 10
-        so_nguyen = so_nguyen // 10
+nam = int(input("Nhap so nam: "))
+if nam >= 0:
+    if nam % 4 == 0 and nam % 100 != 0:
+        print("Nam nhuan")
+    elif nam % 100 == 0 and nam % 400 == 0:
+        print("Nam nhuan")
     else:
-        tong_chu_so_chan += so_nguyen % 10
-        so_nguyen = so_nguyen // 10
+        print("Khong phai nam nhuan")
+else:
+    print("Error")
     
-
-print(tong_chu_so_le)
